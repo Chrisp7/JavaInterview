@@ -5,6 +5,9 @@ public class ClassLoaderChecker {
         MyClassLoader m = new MyClassLoader("/Users/patchen/Desktop/","myClassLoader");
         Class c = m.loadClass("Wali");
         System.out.println(c.getClassLoader());
+        System.out.println(c.getClassLoader().getParent());
+        System.out.println(c.getClassLoader().getParent().getParent());
+        System.out.println(c.getClassLoader().getParent().getParent().getParent());
         c.newInstance();
     }
 }
